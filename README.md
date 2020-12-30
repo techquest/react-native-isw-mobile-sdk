@@ -47,6 +47,10 @@ There are three steps you would have to complete to set up the SDK and perform t
   	```
       compile project(':react-native-isw-mobile-sdk')
   	```
+4. Add the following to you `android/build.gralde` repositories block
+    ```
+                maven { url "http://dl.bintray.com/techquest/maven-repo" }
+    ```
 
 
 
