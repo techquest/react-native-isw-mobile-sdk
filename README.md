@@ -1,4 +1,4 @@
-# react-native-isw-mobile-sdk
+# isw-mobile-payment-sdk-react
 
 This library aids in processing payment through the following channels
 - [x] Card
@@ -17,11 +17,11 @@ There are three steps you would have to complete to set up the SDK and perform t
 
 ### Installation
 
-`$ npm install react-native-isw-mobile-sdk --save`
+`$ npm install isw-mobile-payment-sdk-react --save`
 
 ### Mostly automatic installation
 
-`$ react-native link react-native-isw-mobile-sdk`
+`$ react-native link isw-mobile-payment-sdk-react`
 
 ### Manual installation
 
@@ -29,7 +29,7 @@ There are three steps you would have to complete to set up the SDK and perform t
 #### iOS
 
 1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
-2. Go to `node_modules` ➜ `react-native-isw-mobile-sdk` and add `IswMobileSdk.xcodeproj`
+2. Go to `node_modules` ➜ `isw-mobile-payment-sdk-react` and add `IswMobileSdk.xcodeproj`
 3. In XCode, in the project navigator, select your project. Add `libIswMobileSdk.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
 4. Run your project (`Cmd+R`)<
 
@@ -40,12 +40,12 @@ There are three steps you would have to complete to set up the SDK and perform t
   - Add `new IswMobileSdkPackage()` to the list returned by the `getPackages()` method
 2. Append the following lines to `android/settings.gradle`:
   	```
-  	include ':react-native-isw-mobile-sdk'
-  	project(':react-native-isw-mobile-sdk').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-isw-mobile-sdk/android')
+  	include ':isw-mobile-payment-sdk-react'
+  	project(':isw-mobile-payment-sdk-react').projectDir = new File(rootProject.projectDir, 	'../node_modules/isw-mobile-payment-sdk-react/android')
   	```
 3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
   	```
-      compile project(':react-native-isw-mobile-sdk')
+      compile project(':isw-mobile-payment-sdk-react')
   	```
 4. Add the following to you `android/build.gralde` repositories block
     ```
@@ -58,7 +58,7 @@ There are three steps you would have to complete to set up the SDK and perform t
 You would also need to configure the project with your merchant credentials.
 
 ```javascript
-import IswMobileSdk, { IswPaymentInfo, Environment, IswSdkConfig } from 'react-native-isw-mobile-sdk';
+import IswMobileSdk, { IswPaymentInfo, Environment, IswSdkConfig } from 'isw-mobile-payment-sdk-react';
 
 
 // get your credentials
